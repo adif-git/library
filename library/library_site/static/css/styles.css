@@ -1,0 +1,142 @@
+body{
+  padding-top: 4rem;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+.navbar-expand-md{
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.bg-nav{
+  background-color: #212529;
+}
+
+.fixed-top{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.navbar-collapse{
+  flex-grow = 1;
+  align-items: center;
+}
+
+.navbar-nav{
+  flex-direction: row;
+}
+
+.mr-auto{
+  margin-right: auto;
+}
+
+.selected{
+  color: #fff;
+  overflow: hidden;
+}
+
+.nav-link{
+  display: block;
+  padding: .5rem 1rem;
+}
+
+.nav-drop{
+  position: relative;
+}
+
+.dropdown-toggle{
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropdown-menu{
+  background-color: #414c50;
+  color: #fff;
+  top: 100%;
+  left: 0;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  text-align: center;
+  font-size: 1rem;
+  background-clip: padding-box;
+}
+
+.dropdown-menu.show{
+  display: block;
+}
+
+.dropdown-item{
+  display: block;
+  background-color: transparent;
+  padding: .25rem 1.5rem;
+  color: #fff;
+  text-align: inherit;
+}
+
+.dropdown-item:hover{
+  display: block;
+  background-color: #0784b5;
+  color: #fff;
+  text-align: inherit;
+}
+
+.nomargin{
+  margin:0;
+}
+
+.main-page{
+  padding-top: 2rem;
+}
+
+.welcome-text{
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.list-title{
+  text-align: center;
+  margin: 0;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.booklist-author{
+  color: #0784b5;
+}
+
+.booklist-author:hover{
+  color: #0784b5;
+}
+
+.booklist-book{
+  color: #212529;
+}
+
+.booklist-book:hover{
+  color: #212529;
+}
+
+.update-detail{
+  color: #001a33;
+}
+
+.update-detail:hover{
+  color: #188bff;
+}
+
+.book-detail{
+  color: #0784b5;
+}
+
+.book-detail:hover{
+  color: #0784b5;
+}

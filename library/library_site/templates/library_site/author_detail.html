@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1 class="list-title"><strong>{{ author.first_name }} {{ author.last_name }}</strong></h1>
+  <p class="nomargin"><strong>Book list by {{ author.first_name }} {{ author.last_name }} :</p>
+  <ul>
+    {% for book in author.book_set.all %}
+      <li class="list-unstyled">
+        <a class="book-detail" href="{% url 'book-detail' book.pk %}">{{book}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a class="update-detail" href="{% url 'author_update' author.pk%}"><strong>Update author</strong></a><br>
+  <a class="update-detail" href="{% url 'author_delete' author.pk%}"><strong>Delete author</strong></a>
+{% endblock %}

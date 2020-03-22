@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1 class="list-title"><strong>Delete Author</strong></h1>
+  <p>Are you sure you want to delete author <strong>({{ author }})</strong> ?</p>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+  </form>
+{% endblock %}
