@@ -1,11 +1,12 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+{% if user.is_authenticated %}
     <h1 class="list-title"><strong>Delete Book</strong></h1>
   <p>Are you sure you want to delete book <strong>({{ book }})</strong> ?</p>
   <form action="" method="POST">
     {% csrf_token %}
     <input type="submit" value="Delete">
   </form>
-
+{% endif %}
 {% endblock %}

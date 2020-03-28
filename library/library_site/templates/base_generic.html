@@ -9,7 +9,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
-      a:hover{color: #fff;}
+      a:hover{color: #ff0;}
     </style>
   </head>
   <body>
@@ -19,23 +19,24 @@
           <li><a class="selected nav-link" href="{% url 'index' %}"><strong>Home</strong></a></li>
           <li><a class="selected nav-link" href="{% url 'books' %}"><strong>Books</strong></a></li>
           <li><a class="selected nav-link" href="{% url 'authors' %}"><strong>Authors</strong></a></li>
-          <li class="nav-drop">
-            <a id="add-dropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Add</strong></a>
-            <div class="dropdown-menu" aria-labelledby="add-dropdown">
-              <a class="dropdown-item" href="{% url 'book_create' %}">Add book</a>
-              <a class="dropdown-item" href="{% url 'author_create' %}">Add author</a>
-            </div>
-          </li>
-        </ul>
+          {% if user.is_authenticated %}
+            <li class="nav-drop">
+              <a id="add-dropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Add</strong></a>
+              <div class="dropdown-menu" aria-labelledby="add-dropdown">
+                <a class="dropdown-item" href="{% url 'book_create' %}">Add book</a>
+                <a class="dropdown-item" href="{% url 'author_create' %}">Add author</a>
+              </div>
+            </li>
+          </ul>
+            <li class="selected nav-link"> <strong>Username : {{ user.get_username }}</strong></li>
+            <li><a class="selected nav-link" href="{% url 'logout'%}?next={{request.path}}"><strong>Sign out</strong></a></li>
+          {% else %}
+          </ul>
+            <li><a class="selected nav-link" href="{% url 'login'%}?next={{request.path}}"><strong>Sign in</strong></a></li>
+          {% endif %}
       </div>
     </nav>
-
-    <div class="container-fluid">
-      <div class="main-page">
-        {% block content %}{% endblock %}
-      </div>
-    </div>
-
+    {% block content %}{% endblock %}
     <script>
       $('.dropdown-toggle').dropdown()
     </script>

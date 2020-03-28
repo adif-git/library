@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <h1 class="list-title"><strong>Update Book</strong></h1>
   <form action="" method="post">
     {% csrf_token %}
@@ -9,4 +10,5 @@
     </table>
     <br><input type="submit" value="Submit">
   </form>
+{% endif %}
 {% endblock %}

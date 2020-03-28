@@ -7,6 +7,8 @@
   <p class="nomargin"><strong>Number of pages:</strong> {{ book.number_of_pages }}</a></p>
   <p class="nomargin"><strong>Type of book:</strong> {{ book.type_of_book }}</a></p>
   <br>
-  <a class="update-detail" href="{% url 'book_update' book.pk%}"><strong>Update book</strong></a><br>
-  <a class="update-detail" href="{% url 'book_delete' book.pk%}"><strong>Delete book</strong></a>
+  {% if user.is_authenticated %}
+    <a class="update-detail" href="{% url 'book_update' book.pk%}"><strong>Update book</strong></a><br>
+    <a class="update-detail" href="{% url 'book_delete' book.pk%}"><strong>Delete book</strong></a>
+  {% endif %}
 {% endblock %}

@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: adif9710@gmail.com
+Date: Fri, 27 Mar 2020 07:48:54 -0000
+Message-ID: <158529533431.15229.1440892253179676182@Adif>
+
+Someone asked for password reset for email adif9710@gmail.com. Follow the link below:
+http://127.0.0.1:8000/accounts/reset/Mw/5f5-54fadc1e88e9d63df99f/
+
+-------------------------------------------------------------------------------
