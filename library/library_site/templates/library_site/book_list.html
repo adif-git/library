@@ -1,16 +1,23 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1 class="list-title"><strong>Book List</strong></h1>
+<div class="page-content">
+  <span class="list-title"><strong>BOOKS LIST</strong></span><br><br>
   {% if book_list %}
-  <ul>
-    {% for book in book_list %}
-      <li class="list-unstyled">
-        <a class="booklist-book" href="{{ book.get_absolute_url }}">{{ book.title }}</a> - <a class="booklist-author" href="{% url 'author-detail' book.author.pk %}">{{book.author}}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    <table class="list-table">
+      <tr>
+        <th style="letter-spacing:4px;"><strong>TITLE</strong></th>
+        <th style="letter-spacing:4px;"><strong>AUTHOR</strong></th>
+      </tr>
+      {% for book in book_list %}
+      <tr>
+        <td><a class="list-content" href="{{ book.get_absolute_url }}">{{ book.title }}</a></td>
+        <td><a class="list-content" href="{% url 'author-detail' book.author.pk %}">{{book.author}}</td>
+      </tr>
+      {% endfor %}
+    </table>
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
+</div>
 {% endblock %}

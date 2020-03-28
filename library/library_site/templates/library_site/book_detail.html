@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1 class="list-title"><strong>{{ book.title }}</strong></h1>
+  <!-- <h1 class="list-title"><strong>{{ book.title }}</strong></h1>
   <p class="nomargin"><strong>Author:</strong> <a class="booklist-author" href="{% url 'author-detail' book.author.pk %}">{{ book.author }}</a></p>
   <p class="nomargin"><strong>Date published:</strong> {{ book.date_published }}</a></p>
   <p class="nomargin"><strong>Number of pages:</strong> {{ book.number_of_pages }}</a></p>
@@ -10,5 +10,10 @@
   {% if user.is_authenticated %}
     <a class="update-detail" href="{% url 'book_update' book.pk%}"><strong>Update book</strong></a><br>
     <a class="update-detail" href="{% url 'book_delete' book.pk%}"><strong>Delete book</strong></a>
-  {% endif %}
+  {% endif %} -->
+<div class="caption">
+  <span class="index-title"><strong>WELCOME TO LIBRARY</strong></span><br><br>
+  <span class="index-total"><strong>Total Books: {{num_books}}</strong></span><br>
+  <span class="index-total"><strong>Total Authors: {{num_authors}}</strong></span>
+</div>
 {% endblock %}
