@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # Add below if you want to connect to admin page
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('library_site.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
