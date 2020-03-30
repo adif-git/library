@@ -201,7 +201,7 @@ body, html{
 
 .details{
   background-color: #212529;
-  opacity: 0.75;
+  opacity: 0.9;
   width: 100%;
   height: 100%;
 }
@@ -212,7 +212,6 @@ body, html{
   padding: 5px;
   color: #fff;
   text-align: center;
-  text-transform: uppercase;
   border-bottom: 3px solid #fff;
 }
 
@@ -277,3 +276,106 @@ body, html{
 }
 
 .author-detail:hover{color: #ff0; font-weight: bolder; text-decoration: none;}
+
+a.log{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 20px;
+  border-radius: 6px;
+  background-color: #414c50;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+a.log:hover{
+  background-color: #fff;
+  color: #414c50;
+  border: 1px solid #414c50;
+}
+
+.user{
+  margin: 0 3rem;
+}
+
+.login{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.login-content{
+  background-color: #fefefe;
+  margin: 10rem auto;
+  padding: 20px;
+  border: 1px solid #888;
+  height: 70%;
+  width: 30%;
+}
+
+.login-title{
+  font-size: 30px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.login-message{
+  font-size: 18px;
+  color: #FF0000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-detail{
+  font-size: 15px;
+  color: #000;
+  text-align: center;
+}
+
+.login-text{
+  padding: 0.5em 1em;
+}
+
+.login-btn{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #414c50;
+  border: 2px solid #414c50;
+  margin: 10px;
+}
+
+.login-submit{
+  width:100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.login-btn:hover{
+  background-color: #414c50;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.lost-password{
+  color: #414c50;
+}
+
+.lost-password:hover{
+  color: #414c50;
+  font-weight: bolder;
+  text-decoration: none;
+}

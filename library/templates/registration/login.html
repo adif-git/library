@@ -1,37 +1,39 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
-
-  {% if next %}
-    {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
-    {% else %}
-      <p>Please login to add/change/remove authors and books.</p>
+<div class="login">
+  <div class="login-content">
+    <p class="login-title">LOGIN</p>
+    {% if form.errors %}
+      <p class="login-message">Warning! Your username or password might be wrong. Please try again.</p>
     {% endif %}
-  {% endif %}
 
-  <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-      <tr>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
-      </tr>
-    </table></br>
-    <input type="submit" value="Sign in" />
-    <input type="hidden" name="next" value="{{ next }}" />
-  </form>
+    {% if next %}
+      {% if user.is_authenticated %}
+        <p class="login-message">Warning! Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+      {% else %}
+        <p class="login-detail">Please login to add/change/remove authors and books.</p>
+      {% endif %}
+    {% endif %}
 
-  {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
-
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td class="login-text"><strong>Username</strong></td>
+          <td class="login-text">{{ form.username }}</td>
+        </tr>
+        <tr>
+          <td class="login-text"><strong>Password</strong></td>
+          <td class="login-text">{{ form.password }}</td>
+        </tr>
+      </table>
+      <div class="login-submit">
+      <input class="login-btn" type="submit" value="Sign in" />
+      <p><a class="lost-password" href="{% url 'password_reset' %}">Lost password?</a></p>
+      </div>
+    </form>
+  </div>
+</div>
 {% endblock %}
