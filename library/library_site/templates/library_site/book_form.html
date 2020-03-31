@@ -2,13 +2,28 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<h1 class="list-title"><strong>Update Book</strong></h1>
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
-      {{ form.as_table }}
-    </table>
-    <br><input type="submit" value="Submit">
-  </form>
+  <div class="detail-page">
+    <div class="update-content">
+      <p class="update-title"><strong>Update Book</strong></p>
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="field">
+            <label class="field-text" for={{ form.title.label_tag }}</label> {{ form.title }}
+          </div>
+          <div class="field">
+            <label class="field-text" for={{ form.author.label_tag }}</label> {{ form.author }}
+          </div>
+          <div class="field">
+            <label class="field-text" for={{ form.date_published.label_tag }}</label> {{ form.date_published }}
+          </div>
+          <div class="field">
+            <label class="field-text" for={{ form.number_of_pages.label_tag }}</label> {{ form.number_of_pages }}
+          </div>
+          <div class="submit-btn">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+    </div>
+  </div>
 {% endif %}
 {% endblock %}

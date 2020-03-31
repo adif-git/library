@@ -204,6 +204,7 @@ body, html{
   opacity: 0.9;
   width: 100%;
   height: 100%;
+  border-radius: 25px;
 }
 
 .detail-title{
@@ -378,4 +379,55 @@ a.log:hover{
   color: #414c50;
   font-weight: bolder;
   text-decoration: none;
+}
+
+.update-content{
+  background-color: #212529;
+  opacity: 0.9;
+  width: 500px;
+  border-radius: 25px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.update-title{
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 30px;
+}
+
+.field{
+  color: #fff;
+  padding: 5px;
+  margin: 10px;
+  text-align: left;
+}
+
+.field-text{
+  margin: 0 1rem;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.submit-btn{
+    text-align: center;
+    padding: 15px;
+}
+
+input[type=submit]{
+  background-color: #fff;
+  color: #414c50;
+  border: 2px solid #414c50;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 20px;
+  border-radius: 10px;
+}
+
+input[type=submit]:hover{
+  background-color: #414c50;
+  color: #fff;
+  border: 2px solid #fff;
 }
