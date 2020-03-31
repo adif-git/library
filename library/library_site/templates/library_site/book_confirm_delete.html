@@ -9,6 +9,7 @@
     <form action="" method="POST">
       {% csrf_token %}
       <input type="submit" value="Delete">
+      <a class="delete-text cancel-text" href="{{ book.get_absolute_url }}">Cancel</a>
     </form>
   </div>
 </div>

@@ -447,7 +447,8 @@ input[type=submit]:hover{
   margin: 10rem auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  width: 35%;
+  text-align: center;
 }
 
 .delete-title{
@@ -469,4 +470,10 @@ input[type=submit]:hover{
   font-weight: bold;
   font-style: italic;
   color: red;
+}
+
+.cancel-text:hover{
+  font-weight: bolder;
+  color: inherit;
+  text-decoration: none;
 }
