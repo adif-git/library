@@ -2,11 +2,16 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-  <h1 class="list-title"><strong>Delete Author</strong></h1>
-  <p>Are you sure you want to delete author <strong>({{ author }})</strong> ?</p>
-  <form action="" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="Delete">
-  </form>
+
+  <div class="delete">
+    <div class="delete-content">
+      <h1 class="delete-title">Delete confirmation</h1>
+      <p class="delete-text">Are you sure you want to delete author <span>{{ author }}</span> ?</p>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+      </form>
+    </div>
+  </div>
 {% endif %}
 {% endblock %}

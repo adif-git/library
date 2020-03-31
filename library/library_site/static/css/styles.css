@@ -431,3 +431,42 @@ input[type=submit]:hover{
   color: #fff;
   border: 2px solid #fff;
 }
+
+.delete{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.delete-content{
+  background-color: #fefefe;
+  top: 50%;
+  margin: 10rem auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.delete-title{
+  font-size: 32px;
+  padding: 5px;
+  color: #414c50;
+  text-align: center;
+  font-weight: bold;
+}
+
+.delete-text{
+  font-size: 15px;
+  padding: 10px;
+  text-align: justify;
+  color: #212529;
+}
+
+.delete-text span{
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
