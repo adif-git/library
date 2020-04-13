@@ -22,49 +22,13 @@ body, html{
   position: relative;
 }
 
-.navbar{
-  display: flex;
-  align-items: center;
-  padding: .5rem 1rem;
-}
-
-.navbar-expand-md{
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-}
-
 .bg-nav{
   background-color: #212529;
-}
-
-.fixed-top{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
-.navbar-collapse{
-  flex-grow = 1;
-  align-items: center;
-}
-
-.navbar-nav{
-  flex-direction: row;
-}
-
-.mr-auto{
-  margin-right: auto;
 }
 
 .selected{
   color: #fff;
   overflow: hidden;
-}
-
-.nav-link{
-  display: block;
-  padding: .5rem 1rem;
 }
 
 .nav-drop{
@@ -108,27 +72,9 @@ body, html{
   text-align: inherit;
 }
 
-
-.main-page{
-  padding-top: 3.5rem;
-}
-
-.welcome-text{
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.caption{
-  position: absolute;
-  text-align: center;
-  color: #000;
-  width: 100%;
-  top: 40%;
-  left: 0;
-}
-
 .index-title{
   background-color: #212529;
+  border-radius: 10px;
   color: #fff;
   opacity: 0.95;
   padding: 18px;
@@ -315,7 +261,6 @@ a.log:hover{
   margin: 10rem auto;
   padding: 20px;
   border: 1px solid #888;
-  height: 70%;
   width: 30%;
 }
 
@@ -371,9 +316,7 @@ a.log:hover{
   border: 2px solid #fff;
 }
 
-.lost-password{
-  color: #414c50;
-}
+.lost-password{color: #414c50;}
 
 .lost-password:hover{
   color: #414c50;
@@ -411,8 +354,8 @@ a.log:hover{
 }
 
 .submit-btn{
-    text-align: center;
-    padding: 15px;
+  text-align: center;
+  padding: 15px;
 }
 
 input[type=submit]{
@@ -476,4 +419,43 @@ input[type=submit]:hover{
   font-weight: bolder;
   color: inherit;
   text-decoration: none;
+}
+
+.form-reset{
+  text-align: center;
+  margin: 1rem;
+}
+
+.error-lost{
+  font-size: 14px;
+  color: #FF0000;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.lost-content{
+  background-color: #fefefe;
+  margin: 10rem auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.lost-message{
+  text-align: center;
+  margin: 1rem;
+}
+
+.password-reset{
+  margin: 2rem;
+  text-align: center;
+}
+
+.reset-text{padding: 1em 1em;}
+
+.reset-submit{
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem;
 }
